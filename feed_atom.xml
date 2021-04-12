@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title type="text">Dion Systems Feed</title>
+<subtitle type="html">Dion Systems Feed</subtitle>
+<link href="https://dion.systems/"/>
+<link rel="self" type="application/atom+xml" href="https://dion.systems/feed_atom.xml"/>
+<link rel="alternate" type="text/html" hreflang="en" href="https://dion.systems/"/>
+<rights type="html">Copyright (C) 2020-2021 Dion Systems LLC</rights>
+<generator uri="https://dion.systems/" version="1.0">Dion Systems LLC Site Generator</generator>
+<id>https://dion.systems/</id>
+<updated>2020-11-15T00:00:00.000000+00:00</updated>
+<entry>
+ <title>The How And Why Of Reinventing The Wheel (Introduction to Dion)</title>
+ <link rel="alternate" type="text/html" href="https://dion.systems/video_hms2020.html"/>
+ <id>https://dion.systems/video_hms2020.html</id>
+ <published>2020-11-15T00:00:00.000000+00:00</published>
+ <updated>2020-11-15T00:00:00.000000+00:00</updated>
+ <author><name>Dion Systems LLC</name></author>
+ <summary type="xhtml">
+  <div xmlns="http://www.w3.org/1999/xhtml">A recording of the first public presentation of Dion Systems research, taking place at Handmade Seattle 2020.</div>
+ </summary>
+ <content type="xhtml">
+  <div xmlns="http://www.w3.org/1999/xhtml">
+   <p>A recording of the first public presentation of Dion Systems research, taking place at Handmade Seattle 2020.</p>
+  </div>
+ </content>
+</entry>
+<entry>
+ <title>Text Files Are Great (Kind Of)</title>
+ <link rel="alternate" type="text/html" href="https://dion.systems/blog_a1_p2_text_files.html"/>
+ <id>https://dion.systems/blog_a1_p2_text_files.html</id>
+ <published>2020-04-08T00:00:00.000000+00:00</published>
+ <updated>2020-04-08T00:00:00.000000+00:00</updated>
+ <author>
+  <name>Allen Webster</name>
+ </author>
+ <summary type="xhtml">
+  <div xmlns="http://www.w3.org/1999/xhtml">A look at what we can learn from the success of text files</div>
+ </summary>
+ <content type="xhtml">
+  <div xmlns="http://www.w3.org/1999/xhtml">
+   <p>A look at what we can learn from the success of text files</p>
+  </div>
+ </content>
+</entry>
+<entry>
+ <title>Dion Roadmap (SYNTHESIS)</title>
+ <link rel="alternate" type="text/html" href="https://dion.systems/blog_a1_p1_roadmap_synthesis.html"/>
+ <id>https://dion.systems/blog_a1_p1_roadmap_synthesis.html</id>
+ <published>2020-04-08T00:00:00.000000+00:00</published>
+ <updated>2020-04-08T00:00:00.000000+00:00</updated>
+ <author>
+  <name>Allen Webster</name>
+ </author>
+ <summary type="xhtml">
+  <div xmlns="http://www.w3.org/1999/xhtml">Here's what the Dion Team is planning on next</div>
+ </summary>
+ <content type="xhtml">
+  <div xmlns="http://www.w3.org/1999/xhtml">
+   <p>Here's what the Dion Team is planning on next</p>
+  </div>
+ </content>
+</entry>
+<entry>
+ <title>Dion Roadmap</title>
+ <link rel="alternate" type="text/html" href="https://dion.systems/blog_roadmap.html"/>
+ <id>https://dion.systems/blog_roadmap.html</id>
+ <published>2020-04-08T00:00:00.000000+00:00</published>
+ <updated>2020-04-08T00:00:00.000000+00:00</updated>
+ <author>
+  <name>Allen Webster</name>
+ </author>
+ <summary type="xhtml">
+  <div xmlns="http://www.w3.org/1999/xhtml">Here's what the Dion Team is planning on next</div>
+ </summary>
+ <content type="xhtml">
+  <div xmlns="http://www.w3.org/1999/xhtml">
+   <p>Here's what the Dion Team is planning on next</p>
+  </div>
+ </content>
+</entry>
+</feed>
