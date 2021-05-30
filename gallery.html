@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="">
+<meta property="og:title" content="Gallery">
+<meta name="twitter:title" content="Gallery">
+<link rel="canonical" href="https://dion.systems/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dion.systems/">
+<meta property="og:site_name" content="Dion Systems">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@DionSystems">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="site.js"></script>
+<title>Gallery | Dion Systems</title>
+</head>
+<body>
+
+<div class="header">
+<div class="header_content">
+<a href="home.html"><div class="header_logo marginright1"></div></a>
+<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="blog.html">Blog</a>
+<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="dion_format.html">Dion Format</a>
+<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="metadesk.html">Metadesk</a>
+<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="team.html">Team</a>
+<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="gallery.html">Gallery</a>
+<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="faq.html">FAQ</a>
+</div>
+</div>
+<div class="nospace_smallscreen_y spacer4_y"></div>
+<div class="spacer4_y"></div>
+<div class="page">
+<div class="page_content">
+<div class="spacer2_y nospace_smallscreen_y"></div>
+<h1 id="top" class="title">Gallery</h1><div class="spacer2_y nospace_smallscreen_y"></div>
+<div id="modal" class="modal_overlay" style="display:none;" onclick="CloseImgModal(event)">
+<div class="img_modal">
+<img class="clickable_svg_icon hover_underline_dark w3 h3" style="float:right;" src="assets/close_button_D7C7A124-C1A0E1C5-0DB2B4EE-74D1C2D9.svg" onclick="CloseImgModal(event)"></img>
+<div class="spacer4_y"></div>
+<div class="img_modal_content">
+<div class="modal_img_container">
+<img id="img_modal_img" class="img padbottom2" src=""></img>
+</div>
+<h2 id="img_modal_title" class="title padbottom1"></h2>
+<p id="img_modal_desc" class="text"></p>
+</div>
+</div>
+</div>
+<h2 class="subtitle padtop2"><span class="anchor" id="dion_2020_research_demo"></span>Dion 2020 Research Demo</h2>
+<div class="gallery padtop2">
+<div class="gallery_item" onclick="OpenImgModal(event, 'Code Level-Of-Detail', 'A feature in the original Dion prototype showed at Handmade Seattle 2020, which allows rendering of code to only occur on certain hierarchical levels in the code\'s structure. This allows for easily making high-level views into code, without actually needing to manually maintain something akin to a header file.', './assets/code_lod_0F3D8F06-0CC1E054-18A69238-688D2A01.gif')">
+<img src="./assets/code_lod_0F3D8F06-0CC1E054-18A69238-688D2A01.gif" style="display: none;">
+<div class="gallery_item_img" style="background-image:url('./assets/code_lod_0F3D8F06-0CC1E054-18A69238-688D2A01.gif.thumb.png');" onmouseover="this.style.backgroundImage='url(\'./assets/code_lod_0F3D8F06-0CC1E054-18A69238-688D2A01.gif\')';" onmouseout="this.style.backgroundImage='url(\'./assets/code_lod_0F3D8F06-0CC1E054-18A69238-688D2A01.gif.thumb.png\')';">
+<div class="gallery_title_overlay">
+<div class="gallery_title">Code Level-Of-Detail</div>
+</div>
+</div>
+</div>
+<div class="gallery_item" onclick="OpenImgModal(event, 'Renaming', 'A very early discovery in the Dion project, which is that using structured data as code means that renaming a construct at its definition-site can seamlessly rename all usage sites of that variable without much extra work by the editor. Traditionally, this feature is implemented in IDEs through a separate refactoring menu that requires the editor to either do a full parse of the code, or manage a persistent data structure reflecting the parsed state of the code.', './assets/rename_A338D24E-0B4EB638-6EF02674-8FB3D1A4.gif')">
+<img src="./assets/rename_A338D24E-0B4EB638-6EF02674-8FB3D1A4.gif" style="display: none;">
+<div class="gallery_item_img" style="background-image:url('./assets/rename_A338D24E-0B4EB638-6EF02674-8FB3D1A4.gif.thumb.png');" onmouseover="this.style.backgroundImage='url(\'./assets/rename_A338D24E-0B4EB638-6EF02674-8FB3D1A4.gif\')';" onmouseout="this.style.backgroundImage='url(\'./assets/rename_A338D24E-0B4EB638-6EF02674-8FB3D1A4.gif.thumb.png\')';">
+<div class="gallery_title_overlay">
+<div class="gallery_title">Renaming</div>
+</div>
+</div>
+</div>
+<div class="gallery_item" onclick="OpenImgModal(event, 'Transformative Copy and Paste', 'An experimental feature in the original Handmade Seattle 2020 prototype: The ability to apply a smart code transform when copying and pasting other code. In this case, it is being used to copy certain enum values, and paste their equivalent case labels in a C-like switch statement.', './assets/copy_paste_xform_3C1613B9-DA18400C-FEC8191A-A3F1CBD1.gif')">
+<img src="./assets/copy_paste_xform_3C1613B9-DA18400C-FEC8191A-A3F1CBD1.gif" style="display: none;">
+<div class="gallery_item_img" style="background-image:url('./assets/copy_paste_xform_3C1613B9-DA18400C-FEC8191A-A3F1CBD1.gif.thumb.png');" onmouseover="this.style.backgroundImage='url(\'./assets/copy_paste_xform_3C1613B9-DA18400C-FEC8191A-A3F1CBD1.gif\')';" onmouseout="this.style.backgroundImage='url(\'./assets/copy_paste_xform_3C1613B9-DA18400C-FEC8191A-A3F1CBD1.gif.thumb.png\')';">
+<div class="gallery_title_overlay">
+<div class="gallery_title">Transformative Copy and Paste</div>
+</div>
+</div>
+</div>
+<div class="gallery_item" onclick="OpenImgModal(event, 'Slices', 'A code organization tool presented at Handmade Seattle 2020, which allows the editor to view constructs in an arbitrary order, defined by other code written by the user.', './assets/slices_AE1FEC46-9D185E05-9EDF0EE2-7475EC67.gif')">
+<img src="./assets/slices_AE1FEC46-9D185E05-9EDF0EE2-7475EC67.gif" style="display: none;">
+<div class="gallery_item_img" style="background-image:url('./assets/slices_AE1FEC46-9D185E05-9EDF0EE2-7475EC67.gif.thumb.png');" onmouseover="this.style.backgroundImage='url(\'./assets/slices_AE1FEC46-9D185E05-9EDF0EE2-7475EC67.gif\')';" onmouseout="this.style.backgroundImage='url(\'./assets/slices_AE1FEC46-9D185E05-9EDF0EE2-7475EC67.gif.thumb.png\')';">
+<div class="gallery_title_overlay">
+<div class="gallery_title">Slices</div>
+</div>
+</div>
+</div>
+<div class="gallery_item" onclick="OpenImgModal(event, 'Syntax Switching', 'Demonstrates the non-textual nature of the code in the original Dion prototype, and that the editor is working with code at a more structural level that is removed from text. Text is not the source format, but rather just the way that the code is rendered to the screen.', './assets/syntax_changing_D5331791-B7449FEA-00A10B53-6E364FFB.gif')">
+<img src="./assets/syntax_changing_D5331791-B7449FEA-00A10B53-6E364FFB.gif" style="display: none;">
+<div class="gallery_item_img" style="background-image:url('./assets/syntax_changing_D5331791-B7449FEA-00A10B53-6E364FFB.gif.thumb.png');" onmouseover="this.style.backgroundImage='url(\'./assets/syntax_changing_D5331791-B7449FEA-00A10B53-6E364FFB.gif\')';" onmouseout="this.style.backgroundImage='url(\'./assets/syntax_changing_D5331791-B7449FEA-00A10B53-6E364FFB.gif.thumb.png\')';">
+<div class="gallery_title_overlay">
+<div class="gallery_title">Syntax Switching</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="spacer4_y"></div>
+<div class="spacer3_y"></div>
+<div class="footer">
+<div class="footer_content">
+<p class="bright paragraph small center">© 2020 - 2021 Dion Systems LLC</p>
+<a href="https://discord.com/invite/33vWEJJ"><img class="clickable_svg_icon hover_underline_light w4 h4" src="assets/discord_75738D17-E2A98755-1E4E3913-CCF1F03B.svg"></img></a>
+<a href="https://twitter.com/DionSystems"><img class="clickable_svg_icon hover_underline_light w4 h4" src="assets/twitter_38B9BFED-6F0B3CBC-CF72F789-169BD0B7.svg"></img></a>
+<a href="https://github.com/Dion-Systems"><img class="clickable_svg_icon hover_underline_light w4 h4" src="assets/github_6F664EB3-988525AB-48AEC427-3134C47B.svg"></img></a>
+<a href="https://www.youtube.com/channel/UCrqROvxyh2uqd898CDVd8sA"><img class="clickable_svg_icon hover_underline_light w4 h4" src="assets/youtube_D13F7823-BDF91AE0-1F0BF120-A6CAA551.svg"></img></a>
+<a href="blog_atom.xml"><img class="clickable_svg_icon hover_underline_light w4 h4" src="assets/rss_7D5FDD6F-6980CBB1-B5091FF3-5A1C0523.svg"></img></a>
+</div>
+</div>
+</body>
+</html>

@@ -16,23 +16,37 @@
 <title>Frequently Asked Questions | Dion Systems</title>
 </head>
 <body>
-
-<div class="header">
-<div class="header_content">
-<a href="home.html"><div class="header_logo marginright1"></div></a>
-<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="feed.html">Feed</a>
-<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="dion_format.html">Dion Format</a>
-<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="metadesk.html">Metadesk</a>
-<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="team.html">Team</a>
-<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="faq.html">FAQ</a>
-</div>
-</div>
-<div class="nospace_smallscreen_y spacer4_y"></div>
-<div class="spacer4_y"></div>
-<div class="page">
+
+<div class="header">
+<div class="header_content">
+<a href="home.html"><div class="header_logo marginright1"></div></a>
+<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="blog.html">Blog</a>
+<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="dion_format.html">Dion Format</a>
+<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="metadesk.html">Metadesk</a>
+<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="team.html">Team</a>
+<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="gallery.html">Gallery</a>
+<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="faq.html">FAQ</a>
+</div>
+</div>
+<div class="nospace_smallscreen_y spacer4_y"></div>
+<div class="spacer4_y"></div>
+<div class="page">
 <div class="page_content">
 <div class="spacer2_y nospace_smallscreen_y"></div>
 <h1 id="top" class="title">Frequently Asked Questions</h1><div class="spacer2_y nospace_smallscreen_y"></div>
+<div id="modal" class="modal_overlay" style="display:none;" onclick="CloseImgModal(event)">
+<div class="img_modal">
+<img class="clickable_svg_icon hover_underline_dark w3 h3" style="float:right;" src="assets/close_button_D7C7A124-C1A0E1C5-0DB2B4EE-74D1C2D9.svg" onclick="CloseImgModal(event)"></img>
+<div class="spacer4_y"></div>
+<div class="img_modal_content">
+<div class="modal_img_container">
+<img id="img_modal_img" class="img padbottom2" src=""></img>
+</div>
+<h2 id="img_modal_title" class="title padbottom1"></h2>
+<p id="img_modal_desc" class="text"></p>
+</div>
+</div>
+</div>
 <ol class="list padbottom2 padtop2" type="1">
 <li>
 <a class="link " href="#what_is_dion?">What is Dion?</a>
@@ -40,12 +54,17 @@
 </ol>
 </li>
 <li>
-<a class="link " href="#is_dion_a_language?_is_it_an_editor?_is_it_a_compiler?_really,_what_is_dion?!">Is Dion a language? Is it an editor? Is it a compiler? Really, what is Dion?!</a>
+<a class="link " href="#is_dion_a_language?_is_it_an_editor?_is_it_a_compiler?">Is Dion a language? Is it an editor? Is it a compiler?</a>
 <ol type="a" class="list">
 </ol>
 </li>
 <li>
-<a class="link " href="#what_is_the_business_model_of_dion?">What is the business model of Dion?</a>
+<a class="link " href="#is_the_dion_editor_available?">Is the Dion editor available?</a>
+<ol type="a" class="list">
+</ol>
+</li>
+<li>
+<a class="link " href="#will_dion_tools_be_able_to_modify_existing_code_or_create_new_code_in_text-based_languages?">Will Dion tools be able to modify existing code or create new code in text-based languages?</a>
 <ol type="a" class="list">
 </ol>
 </li>
@@ -69,22 +88,31 @@
 <ol type="a" class="list">
 </ol>
 </li>
+<li>
+<a class="link " href="#what_is_the_business_model_of_dion?">What is the business model of Dion?</a>
+<ol type="a" class="list">
+</ol>
+</li>
 </ol>
 <h2 class="subtitle padtop2"><span class="anchor" id="what_is_dion?"></span>What is Dion?</h2>
 <p class="paragraph"><span class="anchor" id=""></span>
-Dion is <a class="link" href="team.html">our</a> project to build a better format for storing structured information on computers, which notably includes (but is not limited to) the code that we use to program computers. We've identified problems with using text files as the base format for this purpose, so our goal is to provide an alternative format to text files, and to also provide tools to work with that format. We think that this can help make our programming tools smarter, more accessible, easier to learn how to use, faster, and less of a pain in general.
+Dion is <a class="link" href="team.html">our</a> initiative to create a better future for programming. Our approach is focused on deconstructing and studying the architecture of our current ecosystem, and using what we learn to assemble a new ecosystem. We achieve this end by a mixture of prototyping, developing, researching, and theorizing. The output from this project ends up in talks, blog posts, libraries like <a class="link" href="metadesk.html">Metadesk</a>, and someday, technical specs.
 </p>
-<h2 class="subtitle padtop2"><span class="anchor" id="is_dion_a_language?_is_it_an_editor?_is_it_a_compiler?_really,_what_is_dion?!"></span>Is Dion a language? Is it an editor? Is it a compiler? Really, what is Dion?!</h2>
+<h2 class="subtitle padtop2"><span class="anchor" id="is_dion_a_language?_is_it_an_editor?_is_it_a_compiler?"></span>Is Dion a language? Is it an editor? Is it a compiler?</h2>
 <p class="paragraph"><span class="anchor" id=""></span>
-Dion is more-or-less a name we've given to the entire project of shifting the fundamental axioms of our programming systems in favor of something that—we hypothesize—can be much better. This whole project may include many tools. Our original demo at <a class="link" href="https://handmade-seattle.com">Handmade Seattle</a> presented a prototype that featured a tightly coupled system, where all three of these things lived very close to each other. We then learned how to get many of the benefits we presented in the original <a class="link" href="https://handmade-seattle.com">Handmade Seattle</a> demo, but without tightly coupling all of these systems, and it involves a new format for code. So, these days, "Dion" refers to the project of building that new format, and the tools around it.
+If you saw the demo at <a class="link" href="https://handmade-seattle.com">Handmade Seattle</a> 2020, or any of the GIFs that we posted in 2020, you might have the impression that Dion is a language, compiler, and/or editor. Back then, that was the entirety of the project. That demo was a language, compiler, editor, and new file format all rolled into one. But since then, the Dion project has <a class="link" href="#what_is_dion?">come to mean a lot more to us</a>.
 </p>
-<h2 class="subtitle padtop2"><span class="anchor" id="what_is_the_business_model_of_dion?"></span>What is the business model of Dion?</h2>
+<h2 class="subtitle padtop2"><span class="anchor" id="is_the_dion_editor_available?"></span>Is the Dion editor available?</h2>
 <p class="paragraph"><span class="anchor" id=""></span>
-The <a class="link" href="team.html">Dion team</a> is currently comprised of three part-time volunteers who work on the project in our free-time, so there isn't really a business model currently. We do not make any money from Dion right now, and we will continue to work on it as volunteers for the time being. Our future plans for a business model are to-be-determined, but we know that much of our work will be public and open.
+No. We have not released any such tools, because we are still doing research and development on the <a class="link" href="dion_format.html">Dion Format</a> itself.
+</p>
+<h2 class="subtitle padtop2"><span class="anchor" id="will_dion_tools_be_able_to_modify_existing_code_or_create_new_code_in_text-based_languages?"></span>Will Dion tools be able to modify existing code or create new code in text-based languages?</h2>
+<p class="paragraph"><span class="anchor" id=""></span>
+While there may be some opportunities for conversions between structured text and the <a class="link" href="dion_format.html">Dion Format</a>, the format and its tools will not be a way to work with existing text code as if it is not text.
 </p>
 <h2 class="subtitle padtop2"><span class="anchor" id="will_dion_be_open-source?"></span>Will Dion be open-source?</h2>
 <p class="paragraph"><span class="anchor" id=""></span>
-We expect to publish many things as open or open-source, most notably the Dion format specification itself. We also plan to release our metaprogramming utility <a class="link" href="metadesk.html">Metadesk</a> under the MIT license. We have not decided the answer to this question for all code we write as part of the Dion project; it is certainly possible that certain projects we work on will not be open-source.
+We expect to publish many things as open or open-source, most notably the Dion format specification itself. We also plan to release our metaprogramming utility <a class="link" href="metadesk.html">Metadesk</a> under <a class="link" href="https://opensource.org/licenses/MIT">the MIT license</a>. We have not decided the answer to this question for all code we write as part of the Dion project; some projects we work on may be open-source, or they may be closed-source.
 </p>
 <h2 class="subtitle padtop2"><span class="anchor" id="how_will_version_control_work_with_a_new_format?"></span>How will version control work with a new format?</h2>
 <p class="paragraph"><span class="anchor" id=""></span>
@@ -96,21 +124,26 @@ Integrating with existing programming workflows is crucial when developing progr
 </p>
 <h2 class="subtitle padtop2"><span class="anchor" id="how_does_metadesk_relate_to_the_dion_format?"></span>How does <a class="link" href="metadesk.html">Metadesk</a> relate to the <a class="link" href="dion_format.html">Dion Format</a>?</h2>
 <p class="paragraph"><span class="anchor" id=""></span>
-These projects are only related in the sense that <a class="link" href="metadesk.html">Metadesk</a> is helping us build the <a class="link" href="dion_format.html">Dion Format</a>, and both projects are being built with a very similar philosophy behind them. <a class="link" href="metadesk.html">Metadesk</a> is not the <a class="link" href="dion_format.html">Dion Format</a>, it is purely a utility that we're using for the current programming systems that we are all used to.
+These projects are only related in the sense that <a class="link" href="metadesk.html">Metadesk</a> is helping us build the <a class="link" href="dion_format.html">Dion Format</a>, and both projects are being built with a very similar philosophy. <a class="link" href="metadesk.html">Metadesk</a> is not the <a class="link" href="dion_format.html">Dion Format</a>, it is purely a utility that is quite helpful within a text-based software architecture.
+</p>
+<h2 class="subtitle padtop2"><span class="anchor" id="what_is_the_business_model_of_dion?"></span>What is the business model of Dion?</h2>
+<p class="paragraph"><span class="anchor" id=""></span>
+The <a class="link" href="team.html">Dion team</a> is currently comprised of three part-time volunteers who work on the project in our free-time. We do not make any money from Dion right now, and we will continue to work on it as volunteers for the time being. Our future plans for a business model are to-be-determined, but we know that much of our work will be public and open.
 </p>
 </div>
-
-</div>
-<div class="spacer4_y"></div>
-<div class="spacer2_y"></div>
-<div class="footer">
-<div class="footer_content">
-<p class="bright paragraph small center">© 2020 - 2021 Dion Systems LLC</p>
-<a href="https://discord.com/invite/33vWEJJ"><img class="social_media_icon w4 h4" src="assets/75738D17-E2A98755-1E4E3913-CCF1F03B.svg"></img></a>
-<a href="https://twitter.com/DionSystems"><img    class="social_media_icon w4 h4" src="assets/5EF2A6F6-F6E2833B-196A0254-D9353E8B.svg"></img></a>
-<a href="https://github.com/Dion-Systems"><img    class="social_media_icon w4 h4" src="assets/6F664EB3-988525AB-48AEC427-3134C47B.svg"></img></a>
-<a href="https://www.youtube.com/channel/UCrqROvxyh2uqd898CDVd8sA"><img class="social_media_icon w4 h4" src="assets/D13F7823-BDF91AE0-1F0BF120-A6CAA551.svg"></img></a>
-</div>
-</div>
+
+</div>
+<div class="spacer4_y"></div>
+<div class="spacer3_y"></div>
+<div class="footer">
+<div class="footer_content">
+<p class="bright paragraph small center">© 2020 - 2021 Dion Systems LLC</p>
+<a href="https://discord.com/invite/33vWEJJ"><img class="clickable_svg_icon hover_underline_light w4 h4" src="assets/discord_75738D17-E2A98755-1E4E3913-CCF1F03B.svg"></img></a>
+<a href="https://twitter.com/DionSystems"><img class="clickable_svg_icon hover_underline_light w4 h4" src="assets/twitter_38B9BFED-6F0B3CBC-CF72F789-169BD0B7.svg"></img></a>
+<a href="https://github.com/Dion-Systems"><img class="clickable_svg_icon hover_underline_light w4 h4" src="assets/github_6F664EB3-988525AB-48AEC427-3134C47B.svg"></img></a>
+<a href="https://www.youtube.com/channel/UCrqROvxyh2uqd898CDVd8sA"><img class="clickable_svg_icon hover_underline_light w4 h4" src="assets/youtube_D13F7823-BDF91AE0-1F0BF120-A6CAA551.svg"></img></a>
+<a href="blog_atom.xml"><img class="clickable_svg_icon hover_underline_light w4 h4" src="assets/rss_7D5FDD6F-6980CBB1-B5091FF3-5A1C0523.svg"></img></a>
+</div>
+</div>
 </body>
 </html>
