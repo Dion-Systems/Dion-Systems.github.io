@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Allen Webster">
+<meta property="og:title" content="Dion Roadmap">
+<meta name="twitter:title" content="Dion Roadmap">
+<link rel="canonical" href="https://dion.systems/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dion.systems/">
+<meta property="og:site_name" content="Dion Systems">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@DionSystems">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="site.js"></script>
+<title>Dion Roadmap | Dion Systems</title>
+</head>
+<body>
+
+<div class="header">
+<div class="header_content">
+<a href="home.html"><div class="header_logo marginright1"></div></a>
+<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="blog.html">Blog</a>
+<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="dion_format.html">Dion Format</a>
+<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="metadesk.html">Metadesk</a>
+<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="team.html">Team</a>
+<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="gallery.html">Gallery</a>
+<a class="hlayout vlayout_smallscreen link padleft1 padright1" href="faq.html">FAQ</a>
+</div>
+</div>
+<div class="nospace_smallscreen_y spacer4_y"></div>
+<div class="spacer4_y"></div>
+<div class="page">
+<div class="page_content">
+<div class="standalone_link_container"><a class="link" href="blog.html">← Back</a></div><div class="spacer2_y"></div>
+<div class="page_banner" style="background-image: url('./assets/header_3E5C6C3A-7283B702-2065DA5F-795A79FA.png');"></div><div class="spacer2_y nospace_smallscreen_y"></div>
+<h1 id="top" class="title">Dion Roadmap</h1><h5 class="date padtop1 padbottom1">Allen Webster, 30 May 2021</h3><h2 class="subtitle">Here's what the Dion Team is planning on next</h2><div class="spacer2_y nospace_smallscreen_y"></div>
+<div id="modal" class="modal_overlay" style="display:none;" onclick="CloseImgModal(event)">
+<div class="img_modal">
+<img class="clickable_svg_icon hover_underline_dark w3 h3" style="float:right;" src="assets/close_button_D7C7A124-C1A0E1C5-0DB2B4EE-74D1C2D9.svg" onclick="CloseImgModal(event)"></img>
+<div class="spacer4_y"></div>
+<div class="img_modal_content">
+<div class="modal_img_container">
+<img id="img_modal_img" class="img padbottom2" src=""></img>
+</div>
+<h2 id="img_modal_title" class="title padbottom1"></h2>
+<p id="img_modal_desc" class="text"></p>
+</div>
+</div>
+</div>
+<ol class="list padbottom2 padtop2" type="1">
+<li>
+<a class="link " href="#introduction">Introduction</a>
+<ol type="a" class="list">
+</ol>
+</li>
+<li>
+<a class="link " href="#context">Context</a>
+<ol type="a" class="list">
+<li>
+<a class="link " href="#changing_our_approach">Changing Our Approach</a>
+<ol type="a" class="list">
+</ol>
+</li>
+<li>
+<a class="link " href="#why_a_new_format?">Why A New Format?</a>
+<ol type="a" class="list">
+</ol>
+</li>
+<li>
+<a class="link " href="#experimenting_with_formats">Experimenting With Formats</a>
+<ol type="a" class="list">
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<a class="link " href="#roadmap">Roadmap</a>
+<ol type="a" class="list">
+<li>
+<a class="link " href="#the_discovery_phase">The Discovery Phase</a>
+<ol type="a" class="list">
+</ol>
+</li>
+<li>
+<a class="link " href="#community_evaluation">Community Evaluation</a>
+<ol type="a" class="list">
+</ol>
+</li>
+<li>
+<a class="link " href="#refinement_and_publishing">Refinement and Publishing</a>
+<ol type="a" class="list">
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<a class="link " href="#ongoing_blogging">Ongoing Blogging</a>
+<ol type="a" class="list">
+</ol>
+</li>
+</ol>
+<h1 class="title padtop2"><span class="anchor" id="introduction"></span>Introduction</h1>
+<p class="paragraph"><span class="anchor" id=""></span>
+Our ultimate goal is to build a better way to develop software. Last year we developed a prototype of some of our ideas and presented it at <a class="link" href="blog_0001_hms2020.html">Handmade Seattle 2020</a>. Some of the results were exciting, but now we think we shouldn't start by building a single integrated tool. Our new priority is the design of a new file format for source code. It's still a challenging task, but it's well scoped and achievable. Here we explain our roadmap for the development of this new format.
+</p>
+<h1 class="title padtop2"><span class="anchor" id="context"></span>Context</h1>
+<h2 class="subtitle padtop2"><span class="anchor" id="changing_our_approach"></span>Changing Our Approach</h2>
+<p class="paragraph"><span class="anchor" id=""></span>
+Our first instinct was to build a single all-in-one programming environment. This seems like the obvious approach, because it makes code sharing easier, and lends itself to a deeply integrated environment. And it's not just us, many projects in this space have a similar all-in-one architecture. But after working with it, we think the downsides outweigh the benefits.</p>
+<p class="paragraph"><span class="anchor" id=""></span>We could say a lot about the problems with the all-in-one approach, which would be a good topic for future posts. Here we can summarize the problem by pointing out that it breaks the principle <i>don't change too much at once</i>. To stick with that, we think that a good  first step would be to upgrade the piece that sits at the center of our ecosystem of tools: the plaintext file format.
+</p>
+<div class="img_container padtop3 padbottom3 "><img class="img" src="./assets/format_and_tools_C5EB27ED-385ABFCE-656AD3EE-B707E3B2.png"></img></div>
+<h2 class="subtitle padtop2"><span class="anchor" id="why_a_new_format?"></span>Why A New Format?</h2>
+<p class="paragraph"><span class="anchor" id=""></span>
+It's difficult to reason about the benefits of a better format that doesn't exist yet, but we can easily imagine the drawbacks of an <i>inferior</i> format. If it is clear that a less appropriate format for source code would lead to a worse way of programming, that should help to convince us that <i>formats matter</i>.</p>
+<p class="paragraph"><span class="anchor" id=""></span>Imagine for a moment that bitmaps were the format for source code instead of text files. Think about each tool in this alternate ecosystem. Instead of text editors, programmers would use bitmap editors. The text-based languages we have now would be replaced with bitmap-based languages. Everything we use to exchange code, view code, and so on would read and write bitmaps.</p>
+<p class="paragraph"><span class="anchor" id=""></span>There are a couple of ways that a bitmap could specify a program. A Turing-complete 2D cellular automaton could work, but it might be fairly difficult to compile <a class="link" href="https://quinapalus.com/wires11.html">wire world</a>. A better approach might be to define a language with the ability to recognize a character set from a particular font. Once a compiler can extract a textual structure from a bitmap, our existing compiler-building theories can get us the rest of the way to a working program.</p>
+<p class="paragraph"><span class="anchor" id=""></span>Power users in this world would need a better tool than "paint" for editing. Such an editor would need to offer features that improve the common tasks of bitmap programming. For starters, having the bitmap automatically grow in width and height dynamically would be a great quality-of-life feature. It would probably be useful to set a width and height for a snap grid to keep things organized. A high end bitmap editor should be able to use the textual structure in the code to automate the re-flow and re-layout tasks, at least as long as the bitmap parses correctly.</p>
+<p class="paragraph"><span class="anchor" id=""></span>In this alternate ecosystem there would be editors, compilers, and version control, but those tools would have to solve a different set of problems. It's just a guess, but it seems like it would be harder to make great tools for working with bitmap code. All of this implies that <i>the central format for an ecosystem determines how hard it is to make great tools</i>.</p>
+<p class="paragraph"><span class="anchor" id=""></span>If we were programming with bitmaps, we would probably have some very sophisticated tools for dealing with them. In that situation, switching to text files would simplify away some of the problems, and the most sophistcated tools on text could then achieve more powerful features. Our goal is to build a format that compares to text files in the way that text files compare to bitmaps.
+</p>
+<div class="img_container padtop3 padbottom3 "><img class="img" src="./assets/experimentation_267A78A8-83F7AB2F-873FE8C5-0FEC1B41.png"></img></div>
+<h2 class="subtitle padtop2"><span class="anchor" id="experimenting_with_formats"></span>Experimenting With Formats</h2>
+<p class="paragraph"><span class="anchor" id=""></span>
+We can't expect to automatically understand this problem space on our first attempt. To end up with a well designed format for source code, we need to explore the space first. That means we need to try multiple formats and learn from them. And there are a lot of factors we have to pay attention to when trying a format.</p>
+<p class="paragraph"><span class="anchor" id=""></span>For each format there are multiple tools that need to be evaluated. For example, if we only optimize a format to make high-quality compilers easier to build, we may well end up with a format that makes building powerful editors more difficult. We are striving to make a new format that is a <i>global optimization</i> to the environment, not one that shuffles around difficult problems. So our tests need to include multiple types of tools.
+</p>
+<p class="paragraph"><span class="anchor" id=""></span>
+Another difficulty is that there is no shortcut for evaluating <i>easiness</i> of working with a format. If we had a magic formula that could give an accurate easiness score for every tool with every format, we could just crunch the numbers and get our answer, but there is no such formula. The best option we have is to prototype these tools and do our best to gather insights along the way.</p>
+<p class="paragraph"><span class="anchor" id=""></span>As we are testing formats we can't assume that one bad result means that the <i>format</i> is bad. We could always have one attempt at building a tool turn out poorly even for a good format. Similarly a good result doesn't necessarily mean the <i>format</i> is good. To be thorough we will eventually have to try again. For example building more than one language with the format will give us more insight than just building one could.</p>
+<p class="paragraph"><span class="anchor" id=""></span>There is only so much we can to do to be rigorous, because easiness involves subjective preference. We will try to account for that by having team members work independently on different prototypes. That way if one of us evaluates a particular format with a heavy bias, the other team members have a chance of balancing it out. Ultimately we know that these tests will not be perfect, but we think this is a good way to make progress.
+</p>
+<div class="img_container padtop3 padbottom3 "><img class="img" src="./assets/roadmap_F9ACED1C-AE946781-311EF2CE-BF389B7D.png"></img></div>
+<h1 class="title padtop2"><span class="anchor" id="roadmap"></span>Roadmap</h1>
+<h2 class="subtitle padtop2"><span class="anchor" id="the_discovery_phase"></span>The Discovery Phase</h2>
+<p class="paragraph"><span class="anchor" id=""></span>
+With this plan to create so many prototypes we need to make sure we have good iteration speeds. We have a few ideas on how to do that.</p>
+<p class="paragraph"><span class="anchor" id=""></span>First we need scaffolding to support quick prototyping. Our layers for graphics, user input, and debug systems, should be optimized for prototyping. Everything should be organized so that it can be reused between prototypes. And the scaffolding system should let us keep multiple prototypes at various levels of development.</p>
+<p class="paragraph"><span class="anchor" id=""></span>Before we try to design a "serious" candidate format, we plan to keep it simple. Toy formats will help us check the scaffolding code and practice our testing process. They will also give us a chance to see format features in isolation, which will guide our intuition on how to combine them on later designs. Then, over time, we can shift towards more serious candidates until we find an ideal balance of simplicity and utility.
+</p>
+<h2 class="subtitle padtop2"><span class="anchor" id="community_evaluation"></span>Community Evaluation</h2>
+<p class="paragraph"><span class="anchor" id=""></span>
+Later on, if we believe that a format is ready for a <i>really</i> thorough test, we think the best thing to do will be to get more people involved. The goal is to make it easier to develop a high quality ecosystem for software production. That means feedback from a community sharing that goal is the true test. There are some open questions about how we would go about this, but it is a certainty that it must happen before we can call a new format complete.</p>
+<p class="paragraph"><span class="anchor" id=""></span>The good news is there are thriving communities that we think will be interested in our goal. Just to name two, the <a class="link" href="https://handmade.network">Handmade Network</a> fosters an approach to problem solving in computing very similar to ours, and the <a class="link" href="https://futureofcoding.org/">Future of Coding</a> is all about exploring new paradigms of programming. There are many instances of communities emerging and contributing to projects by teams as small as ours. All this leads us to believe that the interest is out there for what we are doing. If that sounds like you, stay tuned because we'll need your help!
+</p>
+<h2 class="subtitle padtop2"><span class="anchor" id="refinement_and_publishing"></span>Refinement and Publishing</h2>
+<p class="paragraph"><span class="anchor" id=""></span>
+Once the format ideas have been reviewed and refined in the hands of the broader community, the last step is to finalize the format with a last production pass.</p>
+<p class="paragraph"><span class="anchor" id=""></span>With a finalized format we will develop all the necessary materials to formally publish it. That means a specification, working open source example code, and free starter tools so that there is a usable ecosystem right away. All of this will be published under a permissive open source license.</p>
+<p class="paragraph"><span class="anchor" id=""></span>The practice of endlessly extending and modifying existing software systems is almost ubiquitous nowadays. However, we think this project is a clear case where being done and sticking with the final results is the right approach. A file format for source code should be a stable substrate for the tools that work with it. So our roadmap ends here, with publishing  the final format.
+</p>
+<h1 class="title padtop2"><span class="anchor" id="ongoing_blogging"></span>Ongoing Blogging</h1>
+<p class="paragraph"><span class="anchor" id=""></span>
+That's it, now you are all caught up! We're getting to work on this plan and we'll let you know when we start getting interesting results. On top of the results from new experiments, there is a lot we learned in 2020 that we haven't been able to share yet. A big part of our plan involves getting this information out there. You can be sure to catch blog posts by <a class="link" href="http://eepurl.com/hgnhBz">joining our mailing list</a>, <a class="link" href="https://twitter.com/DionSystems">following us on Twitter</a>, <a class="link" href="https://discord.com/invite/33vWEJJ">joining our Discord</a>, or <a class="link" href="s">subscribing to our blog</a>"</p>
+</div>
+
+</div>
+<div class="spacer4_y"></div>
+<div class="spacer3_y"></div>
+<div class="footer">
+<div class="footer_content">
+<p class="bright paragraph small center">© 2020 - 2021 Dion Systems LLC</p>
+<a href="https://discord.com/invite/33vWEJJ"><img class="clickable_svg_icon hover_underline_light w4 h4" src="assets/discord_75738D17-E2A98755-1E4E3913-CCF1F03B.svg"></img></a>
+<a href="https://twitter.com/DionSystems"><img class="clickable_svg_icon hover_underline_light w4 h4" src="assets/twitter_38B9BFED-6F0B3CBC-CF72F789-169BD0B7.svg"></img></a>
+<a href="https://github.com/Dion-Systems"><img class="clickable_svg_icon hover_underline_light w4 h4" src="assets/github_6F664EB3-988525AB-48AEC427-3134C47B.svg"></img></a>
+<a href="https://www.youtube.com/channel/UCrqROvxyh2uqd898CDVd8sA"><img class="clickable_svg_icon hover_underline_light w4 h4" src="assets/youtube_D13F7823-BDF91AE0-1F0BF120-A6CAA551.svg"></img></a>
+<a href="blog_atom.xml"><img class="clickable_svg_icon hover_underline_light w4 h4" src="assets/rss_7D5FDD6F-6980CBB1-B5091FF3-5A1C0523.svg"></img></a>
+</div>
+</div>
+</body>
+</html>

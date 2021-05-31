@@ -84,12 +84,12 @@
 </ol>
 </li>
 </ol>
-<p class="paragraph"><span class="anchor" id=""></span>
-Metadesk is an ergonomic parser library for a simple—yet versatile—plaintext language. The language lets you create simple structures and define their meaning with your own code. The library provides the parser, and helpers for introspection and code generation.
+<p class="paragraph"><span class="anchor" id=""></span>
+Metadesk is an ergonomic parser library for a simple—yet versatile—plaintext language. The language lets you create simple structures and define their meaning with your own code. The library provides the parser, and helpers for introspection and code generation.
 </p>
 <div class="standalone_link_container"><a class="link" href="https://github.com/Dion-Systems/metadesk">See Metadesk on GitHub</a></div><h1 class="title padtop2"><span class="anchor" id="language"></span>Language</h1>
-<p class="paragraph"><span class="anchor" id=""></span>
-The language defines a syntax for common structures, like hierarchical lists of strings with metatags. While the structures you form have a consistent pattern, the <i>full meaning</i> of your files is not determined by Metadesk. Take the following example of some Metadesk code:
+<p class="paragraph"><span class="anchor" id=""></span>
+The language defines a syntax for common structures, like hierarchical lists of strings with metatags. While the structures you form have a consistent pattern, the <i>full meaning</i> of your files is not determined by Metadesk. Take the following example of some Metadesk code:
 </p>
 <div class="padtop2 padbottom2"><pre class="code">
 @struct Vec3:
@@ -99,13 +99,13 @@ The language defines a syntax for common structures, like hierarchical lists of 
   z: F32,
 }
 </div>
-<p class="paragraph"><span class="anchor" id=""></span>
-This may seem like a variation on the C syntax for <span class="inline_code_dark">struct</span>s. However, in Metadesk, the above code is parsed as a generic hierarchy of strings, producing an <a class="link" href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">abstract syntax tree</a> that looks like this:
+<p class="paragraph"><span class="anchor" id=""></span>
+This may seem like a variation on the C syntax for <span class="inline_code_dark">struct</span>s. However, in Metadesk, the above code is parsed as a generic hierarchy of strings, producing an <a class="link" href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">abstract syntax tree</a> that looks like this:
 </p>
 <div class="img_container padtop3 padbottom3 "><img class="img" src="./assets/tree_example_1_23DEE877-7AAA9887-71B9AE67-2F0672AD.png"></img></div>
-<p class="paragraph"><span class="anchor" id=""></span>
+<p class="paragraph"><span class="anchor" id=""></span>
 So what's going on here?</p>
-<p class="paragraph"><span class="anchor" id=""></span>In the above diagram, every piece of text you see—<span class="inline_code_dark">Vec3</span>, <span class="inline_code_dark">x</span>, <span class="inline_code_dark">F32</span>, <span class="inline_code_dark">struct</span>—is a Metadesk node. Every node has the same basic structure:
+<p class="paragraph"><span class="anchor" id=""></span>In the above diagram, every piece of text you see—<span class="inline_code_dark">Vec3</span>, <span class="inline_code_dark">x</span>, <span class="inline_code_dark">F32</span>, <span class="inline_code_dark">struct</span>—is a Metadesk node. Every node has the same basic structure:
 </p>
 <ul class="list">
 <li class="list_item">
@@ -118,8 +118,8 @@ So what's going on here?</p>
 <p class="paragraph"><span class="anchor" id=""></span>Each node can also have a list of <i>tags</i>. In this case, <span class="inline_code_dark">Vec3</span> has a single tag: <span class="inline_code_dark">struct</span>.</p>
 </li>
 </ul>
-<p class="paragraph"><span class="anchor" id=""></span>
-Tags can also have children. Syntactically, they look like <i>tag arguments</i>. Take the following example:
+<p class="paragraph"><span class="anchor" id=""></span>
+Tags can also have children. Syntactically, they look like <i>tag arguments</i>. Take the following example:
 </p>
 <div class="padtop2 padbottom2"><pre class="code">
 @enum(base_type: U64)
@@ -132,14 +132,14 @@ Foo:
   Foo_W,
 }
 </div>
-<p class="paragraph"><span class="anchor" id=""></span>
-Once again, this may <i>first appear</i> to be a different syntax for C's <span class="inline_code_dark">enum</span>. But in Metadesk it is just a structure of nodes:
+<p class="paragraph"><span class="anchor" id=""></span>
+Once again, this may <i>first appear</i> to be a different syntax for C's <span class="inline_code_dark">enum</span>. But in Metadesk it is just a structure of nodes:
 </p>
 <div class="img_container padtop3 padbottom3 "><img class="img" src="./assets/tree_example_2_539DAC33-0C9D1634-098101C6-9F933C64.png"></img></div>
-<p class="paragraph"><span class="anchor" id=""></span>
+<p class="paragraph"><span class="anchor" id=""></span>
 Think of tags as an additional list of children that can be attached to any node.</p>
 <p class="paragraph"><span class="anchor" id=""></span>In this example <span class="inline_code_dark">enum</span> is a tag on <span class="inline_code_dark">Foo</span> and <span class="inline_code_dark">enum</span> has one child: <span class="inline_code_dark">base_type</span>. The <span class="inline_code_dark">base_type</span> node itself has the child: <span class="inline_code_dark">U64</span>. Note that the tag and its children have a unique syntax, but they all share the same structure after the parse.</p>
-<p class="paragraph"><span class="anchor" id=""></span>Metadesk provides a flexible syntax to represent parent-children relationships. The string denoting a parent node <i>must</i> be separated from its children with a <span class="inline_code_dark">:</span>, but there are many legal ways of delimiting the children list:
+<p class="paragraph"><span class="anchor" id=""></span>Metadesk provides a flexible syntax to represent parent-children relationships. The string denoting a parent node <i>must</i> be separated from its children with a <span class="inline_code_dark">:</span>, but there are many legal ways of delimiting the children list:
 </p>
 <div class="padtop2 padbottom2"><pre class="code">
 Foo: { A, B, C }
@@ -151,25 +151,24 @@ Foo: [ A B C )
 Foo: ( A B C ]
 Foo: A B C // A separator such as , would end the list of children
 </div>
-<p class="paragraph"><span class="anchor" id=""></span>
-It is also possible to have nodes without strings, but with children, in which case you'd omit the <span class="inline_code_dark">Foo:</span>, and just delimit the list:
+<p class="paragraph"><span class="anchor" id=""></span>
+It is also possible to have nodes without strings, but with children, in which case you'd omit the <span class="inline_code_dark">Foo:</span>, and just delimit the list:
 </p>
 <div class="padtop2 padbottom2"><pre class="code">
 { A B C }</div>
 <h1 class="title padtop2"><span class="anchor" id="library"></span>Library</h1>
-<p class="paragraph"><span class="anchor" id=""></span>
-So, now that we know how to build structured data with Metadesk... <i>what's the point?</i>
-</p>
-<p class="paragraph"><span class="anchor" id=""></span>The answer to that question is really "whatever is useful for you". To give a few examples, we've internally used Metadesk for many purposes, including code and data generation. This very website is generated with a tool that uses Metadesk!
+<p class="paragraph"><span class="anchor" id=""></span>
+So, now that we know how to build structured data with Metadesk... <i>what's the point?</i></p>
+<p class="paragraph"><span class="anchor" id=""></span>The answer to that question is really "whatever is useful for you". To give a few examples, we've internally used Metadesk for many purposes, including code and data generation. This very website is generated with a tool that uses Metadesk!
 </p>
 <div class="img_container padtop3 padbottom3 "><img class="img" src="./assets/metadesk_page_example_028B5E66-66992357-BCC66670-188B533E.png"></img></div>
-<p class="paragraph"><span class="anchor" id=""></span>
-The Metadesk library provides a simple Metadesk parser, as well as a number of helpers for introspection and generation using parsed Metadesk structures. It is intended to provide a lightweight way to start working with Metadesk data in your tools.
+<p class="paragraph"><span class="anchor" id=""></span>
+The Metadesk library provides a simple Metadesk parser, as well as a number of helpers for introspection and generation using parsed Metadesk structures. It is intended to provide a lightweight way to start working with Metadesk data in your tools.
 </p>
 <h1 class="title padtop2"><span class="anchor" id="getting_started"></span>Getting Started</h1>
-<p class="paragraph"><span class="anchor" id=""></span>
+<p class="paragraph"><span class="anchor" id=""></span>
 To get started with Metadesk, go to the <a class="link" href="https://github.com/Dion-Systems/metadesk">GitHub repository</a> and either <span class="inline_code_dark">git clone</span> the repository, or download the ZIP file. It is then recommended that you copy and paste all of the code in the <span class="inline_code_dark">source/</span> folder into a folder that is local to your program, so that your Metadesk programs will continue working even if the library is updated.</p>
-<p class="paragraph"><span class="anchor" id=""></span>To start using the library, all you need to do is then include the Metadesk files and start using the library's API:
+<p class="paragraph"><span class="anchor" id=""></span>To start using the library, all you need to do is then include the Metadesk files and start using the library's API:
 </p>
 <div class="padtop2 padbottom2"><pre class="code">
 <span class="inline_code code_operator">#</span>include <span class="inline_code code_literal">"md.h"</span>
@@ -180,13 +179,13 @@ To get started with Metadesk, go to the <a class="link" href="https://github.com
   // now you can call MD_* functions!
 <span class="inline_code code_operator">}</span>
 </div>
-<p class="paragraph"><span class="anchor" id=""></span>
-We'll be releasing an official reference for Metadesk soon. That will include more information, like guides, examples, and documentation for the library's API.
+<p class="paragraph"><span class="anchor" id=""></span>
+We'll be releasing an official reference for Metadesk soon. That will include more information, like guides, examples, and documentation for the library's API.
 </p>
 <h1 class="title padtop2"><span class="anchor" id="examples"></span>Examples</h1>
 <h2 class="subtitle padtop2"><span class="anchor" id="iterating_tags_and_children_non-recursively"></span>Iterating tags and children non-recursively</h2>
-<p class="paragraph"><span class="anchor" id=""></span>
-Provided some <span class="inline_code_dark">MD_Node *node</span>, we can iterate <span class="inline_code_dark">node</span>'s children like so using the <span class="inline_code_dark">MD_EachNode</span> helper macro.
+<p class="paragraph"><span class="anchor" id=""></span>
+Provided some <span class="inline_code_dark">MD_Node *node</span>, we can iterate <span class="inline_code_dark">node</span>'s children like so using the <span class="inline_code_dark">MD_EachNode</span> helper macro.
 </p>
 <div class="padtop2 padbottom2"><pre class="code">
 <span class="inline_code code_keyword">for</span><span class="inline_code code_operator">(</span>MD_EachNode<span class="inline_code code_operator">(</span>child<span class="inline_code code_operator">,</span> node<span class="inline_code code_operator">-</span><span class="inline_code code_operator">></span>first_child<span class="inline_code code_operator">)</span><span class="inline_code code_operator">)</span>
@@ -194,8 +193,8 @@ Provided some <span class="inline_code_dark">MD_Node *node</span>, we can iterat
   // child is an MD_Node * that we can also introspect on
 <span class="inline_code code_operator">}</span>
 </div>
-<p class="paragraph"><span class="anchor" id=""></span>
-Here is an example of iterating the first code example referenced earlier and printing it out:
+<p class="paragraph"><span class="anchor" id=""></span>
+Here is an example of iterating the first code example referenced earlier and printing it out:
 </p>
 <div class="padtop2 padbottom2"><pre class="code">
 <span class="inline_code code_keyword">int</span> main<span class="inline_code code_operator">(</span><span class="inline_code code_keyword">void</span><span class="inline_code code_operator">)</span>
@@ -230,8 +229,8 @@ Here is an example of iterating the first code example referenced earlier and pr
   <span class="inline_code code_keyword">return</span> <span class="inline_code code_literal">0</span><span class="inline_code code_operator">;</span>
 <span class="inline_code code_operator">}</span>
 </div>
-<p class="paragraph"><span class="anchor" id=""></span>
-This is the output of the above program:
+<p class="paragraph"><span class="anchor" id=""></span>
+This is the output of the above program:
 </p>
 <div class="padtop2 padbottom2"><pre class="code">
 / Vec3
@@ -241,8 +240,8 @@ This is the output of the above program:
 |-- Child z
 </div>
 <h2 class="subtitle padtop2"><span class="anchor" id="checking_if_a_node_has_certain_tags"></span>Checking if a node has certain tags</h2>
-<p class="paragraph"><span class="anchor" id=""></span>
-Given some <span class="inline_code_dark">MD_Node *node</span>, we can check if <span class="inline_code_dark">node</span> has a tag like so:
+<p class="paragraph"><span class="anchor" id=""></span>
+Given some <span class="inline_code_dark">MD_Node *node</span>, we can check if <span class="inline_code_dark">node</span> has a tag like so:
 </p>
 <div class="padtop2 padbottom2"><pre class="code">
 <span class="inline_code code_keyword">if</span><span class="inline_code code_operator">(</span>MD_NodeHasTag<span class="inline_code code_operator">(</span>node<span class="inline_code code_operator">,</span> MD_S8Lit<span class="inline_code code_operator">(</span><span class="inline_code code_literal">"my_special_tag"</span><span class="inline_code code_operator">)</span><span class="inline_code code_operator">)</span><span class="inline_code code_operator">)</span>
@@ -251,8 +250,8 @@ Given some <span class="inline_code_dark">MD_Node *node</span>, we can check if 
 <span class="inline_code code_operator">}</span>
 </div>
 <h2 class="subtitle padtop2"><span class="anchor" id="extracting_node_children_by_index_and_string"></span>Extracting node children by index and string</h2>
-<p class="paragraph"><span class="anchor" id=""></span>
-Given some <span class="inline_code_dark">MD_Node *node</span>, if we expect <span class="inline_code_dark">node</span> to have children labeled with certain strings, we can avoid explicitly iterating over them and instead rely on helpers provided by the library:
+<p class="paragraph"><span class="anchor" id=""></span>
+Given some <span class="inline_code_dark">MD_Node *node</span>, if we expect <span class="inline_code_dark">node</span> to have children labeled with certain strings, we can avoid explicitly iterating over them and instead rely on helpers provided by the library:
 </p>
 <div class="padtop2 padbottom2"><pre class="code">
 MD_Node <span class="inline_code code_operator">*</span>foo_child    <span class="inline_code code_operator">=</span> MD_ChildFromString<span class="inline_code code_operator">(</span>node<span class="inline_code code_operator">,</span> MD_S8Lit<span class="inline_code code_operator">(</span><span class="inline_code code_literal">"foo"</span><span class="inline_code code_operator">)</span><span class="inline_code code_operator">)</span><span class="inline_code code_operator">;</span>
