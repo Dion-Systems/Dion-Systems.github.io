@@ -8,13 +8,13 @@
 <rights type="html">Copyright (C) 2020-2021 Dion Systems LLC</rights>
 <generator uri="https://dion.systems/" version="1.0">Dion Systems LLC Site Generator</generator>
 <id>https://dion.systems/</id>
-<updated>2021-05-30T00:00:00.000000+00:00</updated>
+<updated>2021-05-31T00:00:00.000000+00:00</updated>
 <entry>
  <title>Dion Roadmap</title>
  <link rel="alternate" type="text/html" href="https://dion.systems/blog_0002_roadmap.html"/>
  <id>https://dion.systems/blog_0002_roadmap.html</id>
- <published>2021-05-30T00:00:00.000000+00:00</published>
- <updated>2021-05-30T00:00:00.000000+00:00</updated>
+ <published>2021-05-31T00:00:00.000000+00:00</published>
+ <updated>2021-05-31T00:00:00.000000+00:00</updated>
  <author>
   <name>Allen Webster</name>
  </author>
@@ -40,56 +40,6 @@
  <content type="xhtml">
   <div xmlns="http://www.w3.org/1999/xhtml">
    <p>A recording of the first public presentation of Dion Systems research, taking place at Handmade Seattle 2020.</p>
-  </div>
- </content>
-</entry>
-<entry>
- <title>Home (miguel)</title>
- <link rel="alternate" type="text/html" href="https://dion.systems/blog_home_miguel.html"/>
- <id>https://dion.systems/blog_home_miguel.html</id>
- <published>2020-04-08T00:00:00.000000+00:00</published>
- <updated>2020-04-08T00:00:00.000000+00:00</updated>
- <author><name>Dion Systems LLC</name></author>
- <summary type="xhtml">
-  <div xmlns="http://www.w3.org/1999/xhtml">One proposal for the home page</div>
- </summary>
- <content type="xhtml">
-  <div xmlns="http://www.w3.org/1999/xhtml">
-   <p>One proposal for the home page</p>
-  </div>
- </content>
-</entry>
-<entry>
- <title>Home (ryan)</title>
- <link rel="alternate" type="text/html" href="https://dion.systems/blog_home_ryan.html"/>
- <id>https://dion.systems/blog_home_ryan.html</id>
- <published>2020-04-08T00:00:00.000000+00:00</published>
- <updated>2020-04-08T00:00:00.000000+00:00</updated>
- <author><name>Dion Systems LLC</name></author>
- <summary type="xhtml">
-  <div xmlns="http://www.w3.org/1999/xhtml">Another proposal for the home page (built off Miguel's)</div>
- </summary>
- <content type="xhtml">
-  <div xmlns="http://www.w3.org/1999/xhtml">
-   <p>Another proposal for the home page (built off Miguel's)</p>
-  </div>
- </content>
-</entry>
-<entry>
- <title>Text Files Are Great (Kind Of)</title>
- <link rel="alternate" type="text/html" href="https://dion.systems/blog_0003_text_files.html"/>
- <id>https://dion.systems/blog_0003_text_files.html</id>
- <published>2020-04-08T00:00:00.000000+00:00</published>
- <updated>2020-04-08T00:00:00.000000+00:00</updated>
- <author>
-  <name>Allen Webster</name>
- </author>
- <summary type="xhtml">
-  <div xmlns="http://www.w3.org/1999/xhtml">A look at what we can learn from the success of text files</div>
- </summary>
- <content type="xhtml">
-  <div xmlns="http://www.w3.org/1999/xhtml">
-   <p>A look at what we can learn from the success of text files</p>
   </div>
  </content>
 </entry>
