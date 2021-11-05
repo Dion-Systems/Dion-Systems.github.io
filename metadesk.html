@@ -88,7 +88,7 @@
 <p class="paragraph"><span class="anchor" id=""></span>
 Metadesk is an ergonomic parser library for a simple—yet versatile—plaintext language. The language lets you create simple structures and define their meaning with your own code. The library provides the parser, and helpers for introspection and code generation.
 </p>
-<div class="standalone_link_container"><a class="link" href="https://github.com/Dion-Systems/metadesk">See Metadesk on GitHub</a></div><h1 class="title padtop2"><span class="anchor" id="language"></span>Language</h1>
+<div class="standalone_link_container"><a class="link" href="https://github.com/Dion-Systems/metadesk">See Metadesk on GitHub</a></div><div class="standalone_link_container"><a class="link" href="metadesk_reference.html">Metadesk Reference</a></div><h1 class="title padtop2"><span class="anchor" id="language"></span>Language</h1>
 <p class="paragraph"><span class="anchor" id=""></span>
 The language defines a syntax for common structures, like hierarchical lists of strings with metatags. While the structures you form have a consistent pattern, the <i>full meaning</i> of your files is not determined by Metadesk. Take the following example of some Metadesk code:
 </p>
@@ -159,8 +159,7 @@ It is also possible to have nodes without strings, but with children, in which c
 { A B C }</div>
 <h1 class="title padtop2"><span class="anchor" id="library"></span>Library</h1>
 <p class="paragraph"><span class="anchor" id=""></span>
-So, now that we know how to build structured data with Metadesk... <i>what's the point?</i>
-</p>
+So, now that we know how to build structured data with Metadesk... <i>what's the point?</i></p>
 <p class="paragraph"><span class="anchor" id=""></span>The answer to that question is really "whatever is useful for you". To give a few examples, we've internally used Metadesk for many purposes, including code and data generation. This very website is generated with a tool that uses Metadesk!
 </p>
 <div class="img_container padtop3 padbottom3 "><img class="img" src="./assets/metadesk_page_example_028B5E66-66992357-BCC66670-188B533E.png"></img></div>
@@ -173,16 +172,16 @@ To get started with Metadesk, go to the <a class="link" href="https://github.com
 <p class="paragraph"><span class="anchor" id=""></span>To start using the library, all you need to do is then include the Metadesk files and start using the library's API:
 </p>
 <div class="padtop2 padbottom2"><pre class="code">
-<span class="inline_code code_operator">#</span>include <span class="inline_code code_literal">"md.h"</span>
-<span class="inline_code code_operator">#</span>include <span class="inline_code code_literal">"md.c"</span>
+#include <span class="inline_code code_literal">"md.h"</span>
+#include <span class="inline_code code_literal">"md.c"</span>
 
-<span class="inline_code code_keyword">int</span> main<span class="inline_code code_operator">(</span><span class="inline_code code_keyword">void</span><span class="inline_code code_operator">)</span>
-<span class="inline_code code_operator">{</span>
+<span class="inline_code code_keyword">int</span> main(<span class="inline_code code_keyword">void</span>)
+{
   // now you can call MD_* functions!
-<span class="inline_code code_operator">}</span>
+}
 </div>
 <p class="paragraph"><span class="anchor" id=""></span>
-We'll be releasing an official reference for Metadesk soon. That will include more information, like guides, examples, and documentation for the library's API.
+For more information on using the library, check out the <a class="link" href="metadesk_reference.html">Metadesk Reference</a>.
 </p>
 <h1 class="title padtop2"><span class="anchor" id="examples"></span>Examples</h1>
 <h2 class="subtitle padtop2"><span class="anchor" id="iterating_tags_and_children_non-recursively"></span>Iterating tags and children non-recursively</h2>
@@ -190,46 +189,46 @@ We'll be releasing an official reference for Metadesk soon. That will include mo
 Provided some <span class="inline_code_dark">MD_Node *node</span>, we can iterate <span class="inline_code_dark">node</span>'s children like so using the <span class="inline_code_dark">MD_EachNode</span> helper macro.
 </p>
 <div class="padtop2 padbottom2"><pre class="code">
-<span class="inline_code code_keyword">for</span><span class="inline_code code_operator">(</span>MD_EachNode<span class="inline_code code_operator">(</span>child<span class="inline_code code_operator">,</span> node<span class="inline_code code_operator">-</span><span class="inline_code code_operator">></span>first_child<span class="inline_code code_operator">)</span><span class="inline_code code_operator">)</span>
-<span class="inline_code code_operator">{</span>
+<span class="inline_code code_keyword">for</span>(MD_EachNode(child, node<span class="inline_code code_operator">-</span><span class="inline_code code_operator">></span>first_child))
+{
   // child is an MD_Node * that we can also introspect on
-<span class="inline_code code_operator">}</span>
+}
 </div>
 <p class="paragraph"><span class="anchor" id=""></span>
 Here is an example of iterating the first code example referenced earlier and printing it out:
 </p>
 <div class="padtop2 padbottom2"><pre class="code">
-<span class="inline_code code_keyword">int</span> main<span class="inline_code code_operator">(</span><span class="inline_code code_keyword">void</span><span class="inline_code code_operator">)</span>
-<span class="inline_code code_operator">{</span>
-  MD_String8 example_code <span class="inline_code code_operator">=</span> MD_S8Lit<span class="inline_code code_operator">(</span><span class="inline_code code_literal">"@struct Vec3:\n"</span>
+<span class="inline_code code_keyword">int</span> main(<span class="inline_code code_keyword">void</span>)
+{
+  MD_String8 example_code <span class="inline_code code_operator">=</span> MD_S8Lit(<span class="inline_code code_literal">"@struct Vec3:\n"</span>
                                      <span class="inline_code code_literal">"{\n"</span>
                                      <span class="inline_code code_literal">"  x: F32,\n"</span>
                                      <span class="inline_code code_literal">"  y: F32,\n"</span>
                                      <span class="inline_code code_literal">"  z: F32,\n"</span>
-                                     <span class="inline_code code_literal">"}\n\n"</span><span class="inline_code code_operator">)</span><span class="inline_code code_operator">;</span>
-  MD_ParseResult parse <span class="inline_code code_operator">=</span> MD_ParseWholeString<span class="inline_code code_operator">(</span>MD_S8Lit<span class="inline_code code_operator">(</span><span class="inline_code code_literal">"Generated Test Code"</span><span class="inline_code code_operator">)</span><span class="inline_code code_operator">,</span>
-                                             example_code<span class="inline_code code_operator">)</span><span class="inline_code code_operator">;</span>
+                                     <span class="inline_code code_literal">"}\n\n"</span>);
+  MD_ParseResult parse <span class="inline_code code_operator">=</span> MD_ParseWholeString(MD_S8Lit(<span class="inline_code code_literal">"Generated Test Code"</span>),
+                                             example_code);
     
   // Iterate through each top-level node
-  <span class="inline_code code_keyword">for</span><span class="inline_code code_operator">(</span>MD_EachNode<span class="inline_code code_operator">(</span>node<span class="inline_code code_operator">,</span> parse<span class="inline_code code_operator">.</span>node<span class="inline_code code_operator">-</span><span class="inline_code code_operator">></span>first_child<span class="inline_code code_operator">)</span><span class="inline_code code_operator">)</span>
-  <span class="inline_code code_operator">{</span>
-    printf<span class="inline_code code_operator">(</span><span class="inline_code code_literal">"/ %.*s\n"</span><span class="inline_code code_operator">,</span> MD_StringExpand<span class="inline_code code_operator">(</span>node<span class="inline_code code_operator">-</span><span class="inline_code code_operator">></span>string<span class="inline_code code_operator">)</span><span class="inline_code code_operator">)</span><span class="inline_code code_operator">;</span>
+  <span class="inline_code code_keyword">for</span>(MD_EachNode(node, parse<span class="inline_code code_operator">.</span>node<span class="inline_code code_operator">-</span><span class="inline_code code_operator">></span>first_child))
+  {
+    printf(<span class="inline_code code_literal">"/ %.*s\n"</span>, MD_S8VArg(node<span class="inline_code code_operator">-</span><span class="inline_code code_operator">></span>string));
 
     // Print the name of each of the node's tags
-    <span class="inline_code code_keyword">for</span><span class="inline_code code_operator">(</span>MD_EachNode<span class="inline_code code_operator">(</span>tag<span class="inline_code code_operator">,</span> node<span class="inline_code code_operator">-</span><span class="inline_code code_operator">></span>first_tag<span class="inline_code code_operator">)</span><span class="inline_code code_operator">)</span>
-    <span class="inline_code code_operator">{</span>
-      printf<span class="inline_code code_operator">(</span><span class="inline_code code_literal">"|-- Tag %.*s\n"</span><span class="inline_code code_operator">,</span> MD_StringExpand<span class="inline_code code_operator">(</span>tag<span class="inline_code code_operator">-</span><span class="inline_code code_operator">></span>string<span class="inline_code code_operator">)</span><span class="inline_code code_operator">)</span><span class="inline_code code_operator">;</span>
-    <span class="inline_code code_operator">}</span>
+    <span class="inline_code code_keyword">for</span>(MD_EachNode(tag, node<span class="inline_code code_operator">-</span><span class="inline_code code_operator">></span>first_tag))
+    {
+      printf(<span class="inline_code code_literal">"|-- Tag %.*s\n"</span>, MD_S8VArg(tag<span class="inline_code code_operator">-</span><span class="inline_code code_operator">></span>string));
+    }
 
     // Print the name of each of the node's children
-    <span class="inline_code code_keyword">for</span><span class="inline_code code_operator">(</span>MD_EachNode<span class="inline_code code_operator">(</span>child<span class="inline_code code_operator">,</span> node<span class="inline_code code_operator">-</span><span class="inline_code code_operator">></span>first_child<span class="inline_code code_operator">)</span><span class="inline_code code_operator">)</span>
-    <span class="inline_code code_operator">{</span>
-      printf<span class="inline_code code_operator">(</span><span class="inline_code code_literal">"|-- Child %.*s\n"</span><span class="inline_code code_operator">,</span> MD_StringExpand<span class="inline_code code_operator">(</span>child<span class="inline_code code_operator">-</span><span class="inline_code code_operator">></span>string<span class="inline_code code_operator">)</span><span class="inline_code code_operator">)</span><span class="inline_code code_operator">;</span>
-    <span class="inline_code code_operator">}</span>
-  <span class="inline_code code_operator">}</span>
+    <span class="inline_code code_keyword">for</span>(MD_EachNode(child, node<span class="inline_code code_operator">-</span><span class="inline_code code_operator">></span>first_child))
+    {
+      printf(<span class="inline_code code_literal">"|-- Child %.*s\n"</span>, MD_S8VArg(child<span class="inline_code code_operator">-</span><span class="inline_code code_operator">></span>string));
+    }
+  }
 
-  <span class="inline_code code_keyword">return</span> <span class="inline_code code_literal">0</span><span class="inline_code code_operator">;</span>
-<span class="inline_code code_operator">}</span>
+  <span class="inline_code code_keyword">return</span> <span class="inline_code code_literal">0</span>;
+}
 </div>
 <p class="paragraph"><span class="anchor" id=""></span>
 This is the output of the above program:
@@ -246,22 +245,22 @@ This is the output of the above program:
 Given some <span class="inline_code_dark">MD_Node *node</span>, we can check if <span class="inline_code_dark">node</span> has a tag like so:
 </p>
 <div class="padtop2 padbottom2"><pre class="code">
-<span class="inline_code code_keyword">if</span><span class="inline_code code_operator">(</span>MD_NodeHasTag<span class="inline_code code_operator">(</span>node<span class="inline_code code_operator">,</span> MD_S8Lit<span class="inline_code code_operator">(</span><span class="inline_code code_literal">"my_special_tag"</span><span class="inline_code code_operator">)</span><span class="inline_code code_operator">)</span><span class="inline_code code_operator">)</span>
-<span class="inline_code code_operator">{</span>
+<span class="inline_code code_keyword">if</span>(MD_NodeHasTag(node, MD_S8Lit(<span class="inline_code code_literal">"my_special_tag"</span>)))
+{
   // node was tagged with @my_special_tag
-<span class="inline_code code_operator">}</span>
+}
 </div>
 <h2 class="subtitle padtop2"><span class="anchor" id="extracting_node_children_by_index_and_string"></span>Extracting node children by index and string</h2>
 <p class="paragraph"><span class="anchor" id=""></span>
 Given some <span class="inline_code_dark">MD_Node *node</span>, if we expect <span class="inline_code_dark">node</span> to have children labeled with certain strings, we can avoid explicitly iterating over them and instead rely on helpers provided by the library:
 </p>
 <div class="padtop2 padbottom2"><pre class="code">
-MD_Node <span class="inline_code code_operator">*</span>foo_child    <span class="inline_code code_operator">=</span> MD_ChildFromString<span class="inline_code code_operator">(</span>node<span class="inline_code code_operator">,</span> MD_S8Lit<span class="inline_code code_operator">(</span><span class="inline_code code_literal">"foo"</span><span class="inline_code code_operator">)</span><span class="inline_code code_operator">)</span><span class="inline_code code_operator">;</span>
-MD_Node <span class="inline_code code_operator">*</span>bar_child    <span class="inline_code code_operator">=</span> MD_ChildFromString<span class="inline_code code_operator">(</span>node<span class="inline_code code_operator">,</span> MD_S8Lit<span class="inline_code code_operator">(</span><span class="inline_code code_literal">"bar"</span><span class="inline_code code_operator">)</span><span class="inline_code code_operator">)</span><span class="inline_code code_operator">;</span>
-MD_Node <span class="inline_code code_operator">*</span>baz_child    <span class="inline_code code_operator">=</span> MD_ChildFromString<span class="inline_code code_operator">(</span>node<span class="inline_code code_operator">,</span> MD_S8Lit<span class="inline_code code_operator">(</span><span class="inline_code code_literal">"baz"</span><span class="inline_code code_operator">)</span><span class="inline_code code_operator">)</span><span class="inline_code code_operator">;</span>
-MD_Node <span class="inline_code code_operator">*</span>first_child  <span class="inline_code code_operator">=</span> MD_ChildFromIndex<span class="inline_code code_operator">(</span>node<span class="inline_code code_operator">,</span> <span class="inline_code code_literal">0</span><span class="inline_code code_operator">)</span><span class="inline_code code_operator">;</span>
-MD_Node <span class="inline_code code_operator">*</span>second_child <span class="inline_code code_operator">=</span> MD_ChildFromIndex<span class="inline_code code_operator">(</span>node<span class="inline_code code_operator">,</span> <span class="inline_code code_literal">1</span><span class="inline_code code_operator">)</span><span class="inline_code code_operator">;</span>
-MD_Node <span class="inline_code code_operator">*</span>third_child  <span class="inline_code code_operator">=</span> MD_ChildFromIndex<span class="inline_code code_operator">(</span>node<span class="inline_code code_operator">,</span> <span class="inline_code code_literal">2</span><span class="inline_code code_operator">)</span><span class="inline_code code_operator">;</span>
+MD_Node <span class="inline_code code_operator">*</span>foo_child    <span class="inline_code code_operator">=</span> MD_ChildFromString(node, MD_S8Lit(<span class="inline_code code_literal">"foo"</span>));
+MD_Node <span class="inline_code code_operator">*</span>bar_child    <span class="inline_code code_operator">=</span> MD_ChildFromString(node, MD_S8Lit(<span class="inline_code code_literal">"bar"</span>));
+MD_Node <span class="inline_code code_operator">*</span>baz_child    <span class="inline_code code_operator">=</span> MD_ChildFromString(node, MD_S8Lit(<span class="inline_code code_literal">"baz"</span>));
+MD_Node <span class="inline_code code_operator">*</span>first_child  <span class="inline_code code_operator">=</span> MD_ChildFromIndex(node, <span class="inline_code code_literal">0</span>);
+MD_Node <span class="inline_code code_operator">*</span>second_child <span class="inline_code code_operator">=</span> MD_ChildFromIndex(node, <span class="inline_code code_literal">1</span>);
+MD_Node <span class="inline_code code_operator">*</span>third_child  <span class="inline_code code_operator">=</span> MD_ChildFromIndex(node, <span class="inline_code code_literal">2</span>);
 </div>
 </div>
 

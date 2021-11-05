@@ -8,7 +8,25 @@
 <rights type="html">Copyright (C) 2020-2021 Dion Systems LLC</rights>
 <generator uri="https://dion.systems/" version="1.0">Dion Systems LLC Site Generator</generator>
 <id>https://dion.systems/</id>
-<updated>2021-05-31T00:00:00.000000+00:00</updated>
+<updated>2021-11-05T00:00:00.000000+00:00</updated>
+<entry>
+ <title>Metadesk v1.0 Release</title>
+ <link rel="alternate" type="text/html" href="https://dion.systems/blog_0004_metadesk_release.html"/>
+ <id>https://dion.systems/blog_0004_metadesk_release.html</id>
+ <published>2021-11-05T00:00:00.000000+00:00</published>
+ <updated>2021-11-05T00:00:00.000000+00:00</updated>
+ <author>
+  <name>Ryan Fleury</name>
+ </author>
+ <summary type="xhtml">
+  <div xmlns="http://www.w3.org/1999/xhtml">Announcing the first release of Metadesk, our metaprogramming tool</div>
+ </summary>
+ <content type="xhtml">
+  <div xmlns="http://www.w3.org/1999/xhtml">
+   <p>Announcing the first release of Metadesk, our metaprogramming tool</p>
+  </div>
+ </content>
+</entry>
 <entry>
  <title>Dion Roadmap</title>
  <link rel="alternate" type="text/html" href="https://dion.systems/blog_0002_roadmap.html"/>
@@ -35,11 +53,11 @@
  <updated>2020-11-15T00:00:00.000000+00:00</updated>
  <author><name>Dion Systems LLC</name></author>
  <summary type="xhtml">
-  <div xmlns="http://www.w3.org/1999/xhtml">A recording of the first public presentation of Dion Systems research, taking place at Handmade Seattle 2020.</div>
+  <div xmlns="http://www.w3.org/1999/xhtml">A recording of the first public presentation of Dion Systems research, taking place at Handmade Seattle 2020</div>
  </summary>
  <content type="xhtml">
   <div xmlns="http://www.w3.org/1999/xhtml">
-   <p>A recording of the first public presentation of Dion Systems research, taking place at Handmade Seattle 2020.</p>
+   <p>A recording of the first public presentation of Dion Systems research, taking place at Handmade Seattle 2020</p>
   </div>
  </content>
 </entry>
